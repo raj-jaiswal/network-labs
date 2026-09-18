@@ -1,0 +1,7 @@
+www.wikipedia.org
+Name: dyna.wikimedia.org
+IP Addresses Returned: 2
+IP Addresses: 103.102.166.224, 2001:df2:e500:ed1a::1
+172.9.9.17
+Time Difference: 0.098750679 seconds
+

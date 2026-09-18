@@ -1,0 +1,4 @@
+Total Packets Recieved: 10262
+Protocols Observed: ARP, DHCP, SSDP, ICMPv6, MDNS, XID, TCP, NTP, UDP
+Most Frequent: MDNS
+

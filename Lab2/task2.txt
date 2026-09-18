@@ -1,0 +1,7 @@
+Source: 142.250.182.46
+Destination: 172.9.9.17
+Length: 98 Bytes
+TTL: 109
+IPv4
+0.075681842 seconds
+
