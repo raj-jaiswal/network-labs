@@ -52,12 +52,6 @@ int main() {
     float observed_efficiency = (float)successful / T;
     float theoretical_efficiency = N * p * (float)pow(1 - p, N - 1);
 
-    printf("\n========== Slotted ALOHA Results ==========\n");
-
-    printf("Number of nodes       : %d\n", N);
-    printf("Transmission probability: %.2f\n", p);
-    printf("Total slots           : %d\n", T);
-
     printf("\nSuccessful slots      : %d\n", successful);
     printf("Collision slots       : %d\n", collisions);
     printf("Idle slots            : %d\n", idle);
@@ -67,8 +61,6 @@ int main() {
 
     printf("Theoretical efficiency: %.2f%%\n",
            theoretical_efficiency * 100);
-
-    printf("===========================================\n");
 
     return 0;
 }

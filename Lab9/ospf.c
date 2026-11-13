@@ -26,8 +26,7 @@ void displayTopology() {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             if (adj[i][j])
-                printf("Router %d -- Router %d : Cost = %d\n",
-                       i, j, adj[i][j]);
+                printf("Router %d -- Router %d : Cost = %d\n", i, j, adj[i][j]);
         }
     }
 }
@@ -220,38 +219,22 @@ int main() {
     printf("Number of Routers: ");
     scanf("%d", &n);
 
-    if (n < 2 || n > MAX) {
-        printf("Invalid number of routers.\n");
-        return 1;
-    }
-
     printf("Number of Links: ");
     scanf("%d", &m);
-
-    if (m < 0 || m > n * (n - 1) / 2) {
-        printf("Invalid number of links.\n");
-        return 1;
-    }
 
     printf("Enter links (Router1 Router2 Cost):\n");
 
     for (int i = 0; i < m; i++) {
         int u, v, cost;
         scanf("%d %d %d", &u, &v, &cost);
-
-        if (u < 0 || u >= n || v < 0 || v >= n ||
-            u == v || cost <= 0) {
-            printf("Invalid link.\n");
-            return 1;
-        }
-
-        adj[u][v] = adj[v][u] = cost;
+        adj[u][v] = cost;
+        adj[v][u] = cost;
     }
 
     int choice;
 
     do {
-        printf("\n========== OSPF ROUTING SIMULATOR ==========\n");
+        printf("\nOSPF ROUTING SIMULATOR\n");
         printf("1. Display Network Topology\n");
         printf("2. Simulate Hello Packet Exchange\n");
         printf("3. Generate LSAs\n");
